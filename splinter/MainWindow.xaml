@@ -7,7 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button Content="Button" HorizontalAlignment="Center"  VerticalAlignment="Center" Click="Button_Click"/>
+        <Button Content="test db" HorizontalAlignment="Left"  VerticalAlignment="Top" Click="reset" Margin="750,10,0,0"/>
+        <TextBox x:Name="inpname"  HorizontalAlignment="Left" Margin="601,109,0,0" TextWrapping="Wrap" Text="name" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="inpusername" HorizontalAlignment="Left" Margin="601,146,0,0" TextWrapping="Wrap" Text="username" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="inppassword" HorizontalAlignment="Left" TextWrapping="Wrap" Text="password" VerticalAlignment="Top" Width="120" Margin="601,187,0,0"/>
+        <Button x:Name="btncreate" Content="create account" HorizontalAlignment="Left" Height="25" Margin="601,308,0,0" VerticalAlignment="Top" Width="120" Click="btncreate_Click"/>
+        <DataGrid x:Name="users"  Margin="10,10,625,34" />
+        <DataGrid x:Name="posts"  Margin="223,10,412,34" />
+        <Button x:Name="login" Content="login" HorizontalAlignment="Left" Height="25" Margin="601,250,0,0" VerticalAlignment="Top" Width="120" Click="btnlogin"/>
 
     </Grid>
 </Window>
