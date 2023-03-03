@@ -13,7 +13,6 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-using splinter;
 
 namespace splinter
 {
@@ -25,11 +24,36 @@ namespace splinter
         public MainWindow()
         {
             InitializeComponent();
+            getdata();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        public void getdata()
         {
-            db.connect();
+            users.ItemsSource = db.getusers();
+            users.ItemsSource = db.getposts();
+        }
+        private void reset(object sender, RoutedEventArgs e)
+        {
+            getdata();
+            
+        }
+
+        private void btncreate_Click(object sender, RoutedEventArgs e)
+        {
+            string name = inpname.Text;
+            string username = inpusername.Text;
+            string password = inppassword.Text;
+
+            db.createUser(name, username, password);
+            getdata();
+        }
+
+        private void btnlogin(object sender, RoutedEventArgs e)
+        {
+            string username = inpusername.Text;
+            string password = inppassword.Text;
+
+            db.login(username, password);
         }
     }
 }
