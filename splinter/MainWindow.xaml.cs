@@ -30,7 +30,7 @@ namespace splinter
         public void getdata()
         {
             users.ItemsSource = db.getusers();
-            users.ItemsSource = db.getposts();
+            posts.ItemsSource = db.getposts();
         }
         private void reset(object sender, RoutedEventArgs e)
         {
@@ -42,7 +42,7 @@ namespace splinter
         {
             string name = inpname.Text;
             string username = inpusername.Text;
-            string password = inppassword.Text;
+            string password = inppassword.Password;
 
             db.createUser(name, username, password);
             getdata();
@@ -51,7 +51,7 @@ namespace splinter
         private void btnlogin(object sender, RoutedEventArgs e)
         {
             string username = inpusername.Text;
-            string password = inppassword.Text;
+            string password = inppassword.Password;
 
             db.login(username, password);
         }

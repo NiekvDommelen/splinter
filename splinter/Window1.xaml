@@ -9,7 +9,7 @@
     <Grid>
         <DataGrid x:Name="users"  Margin="10,10,625,34" />
         <DataGrid x:Name="posts"  Margin="223,10,412,34" />
-        <Label x:Name="lablog" Content="logged in as" HorizontalAlignment="Left" Margin="462,35,0,0" VerticalAlignment="Top" />
+        <Label x:Name="lablog" Content="logged in as " HorizontalAlignment="Left" Margin="462,35,0,0" VerticalAlignment="Top" />
         <Button x:Name="btnlogout" Content="log out" HorizontalAlignment="Left" Margin="750,10,0,0" VerticalAlignment="Top" />
         <TextBox x:Name="inptitle" HorizontalAlignment="Left" Margin="474,140,0,0" TextWrapping="Wrap" Text="title" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="inpcontent" HorizontalAlignment="Left" Margin="474,196,0,0" TextWrapping="Wrap" Text="content" VerticalAlignment="Top" Width="229"  Height="117"/>

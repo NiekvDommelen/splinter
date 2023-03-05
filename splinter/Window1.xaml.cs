@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Org.BouncyCastle.Bcpg;
 
 namespace splinter
 {
@@ -19,23 +20,36 @@ namespace splinter
     /// </summary>
     public partial class Window1 : Window
     {
-        public Window1()
+        private int userid;
+        private string name;
+        private string username;
+        public Window1(int _userid, string _name, string _username)
         {
             InitializeComponent();
 
             getdata();
+            lablog.Content += _username;
+            userid = _userid;
+            name = _name;
+            username = _username;
+          
         }
 
+        
         public void getdata()
         {
             users.ItemsSource = db.getusers();
-            users.ItemsSource = db.getposts();
+            posts.ItemsSource = db.getposts();
         }
 
         private void btnpost_Click(object sender, RoutedEventArgs e)
         {
-            
-            
+            string title = inptitle.Text;
+            string content = inpcontent.Text;
+            MessageBox.Show(userid.ToString()+ name + username);
+            db.post(username, userid, title, content);
+
+            getdata();
         }
     }
 }
