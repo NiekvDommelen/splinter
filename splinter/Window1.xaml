@@ -7,12 +7,14 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="users"  Margin="10,10,625,34" />
-        <DataGrid x:Name="posts"  Margin="223,10,412,34" />
+        <DataGrid x:Name="users"  Margin="10,10,625,228" />
+        <DataGrid x:Name="posts"  Margin="10,206,625,34" />
         <Label x:Name="lablog" Content="logged in as " HorizontalAlignment="Left" Margin="462,35,0,0" VerticalAlignment="Top" />
         <Button x:Name="btnlogout" Content="log out" HorizontalAlignment="Left" Margin="750,10,0,0" VerticalAlignment="Top" />
-        <TextBox x:Name="inptitle" HorizontalAlignment="Left" Margin="474,140,0,0" TextWrapping="Wrap" Text="title" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="inpcontent" HorizontalAlignment="Left" Margin="474,196,0,0" TextWrapping="Wrap" Text="content" VerticalAlignment="Top" Width="229"  Height="117"/>
+        <TextBox x:Name="inptitle" HorizontalAlignment="Left" Margin="474,105,0,0" TextWrapping="Wrap" Text="title" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="inpcontent" HorizontalAlignment="Left" Margin="474,147,0,0" TextWrapping="Wrap" Text="content" VerticalAlignment="Top" Width="229"  Height="117"/>
         <Button x:Name="btnpost" Content="post" HorizontalAlignment="Left" Margin="480,334,0,0" VerticalAlignment="Top" Height="24" Width="108" Click="btnpost_Click"/>
+        <Button Content="upload image" HorizontalAlignment="Left" Margin="480,278,0,0" VerticalAlignment="Top" Height="30" Width="108" Click="upload_Img_Click" />
+        <Image x:Name="imgpost" HorizontalAlignment="Left" Height="173" Margin="218,30,0,0" VerticalAlignment="Top" Width="173"/>
     </Grid>
 </Window>
