@@ -105,13 +105,13 @@ namespace splinter
             }
         }
 
-        public static void post( string author, int authorid, string title,string content)
+        public static void post( string author, int authorid, string title,string content, string image)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
-
+                
                 connection.Open();
-                string sql = $"INSERT INTO posts (author,authorid,title,content) VALUES ('{author}', '{authorid}', '{title}', '{content}');";
+                string sql = $"INSERT INTO posts (author,authorid,title,content,image) VALUES ('{author}', '{authorid}', '{title}', '{content}', '{image}');";
                 MySqlCommand command = new MySqlCommand(sql, connection);
                 var result = command.ExecuteNonQuery();
                 MessageBox.Show("posted!!");
